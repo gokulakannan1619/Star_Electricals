@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STAR ELECTRICALS | Reliable Electrical Solutions, Solar Energy & Material Supply</title>
+  <meta name="description" content="STAR ELECTRICALS - Trusted electrical service, supply, solar energy, high-mast lighting, installation and maintenance company in Cuddalore, Tamil Nadu.">
+  <meta name="keywords" content="Star Electricals, Electrical Contractor Cuddalore, Solar Panel Installation, High-Mast Lighting, Electrical Material Supply, Bhuvanagiri">
+  
+  <!-- Google Fonts: Poppins, Inter & Indian language fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&family=Noto+Sans+Tamil:wght@400;600;700&family=Noto+Sans+Devanagari:wght@400;600;700&family=Noto+Sans+Telugu:wght@400;600;700&family=Noto+Sans+Malayalam:wght@400;600;700&family=Noto+Sans+Kannada:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome 6 Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       HEADER & NAVIGATION BAR
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-container">
+      <!-- Logo Left -->
+      <a href="#home" class="logo-wrapper" aria-label="STAR ELECTRICALS Home">
+        <img src="assets/images/logo-horizontal.png" alt="STAR ELECTRICALS Logo" class="logo-img" onerror="this.src='assets/images/logo-transparent.png'">
+      </a>
+
+      <!-- Center Navigation Links -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="#home" class="nav-link active" data-i18n="nav_home">Home</a></li>
+          <li><a href="#services" class="nav-link" data-i18n="nav_services">Services</a></li>
+          <li><a href="#about" class="nav-link" data-i18n="nav_about">About Us</a></li>
+          <li><a href="#products" class="nav-link" data-i18n="nav_products">Products</a></li>
+          <li><a href="#projects" class="nav-link" data-i18n="nav_projects">Projects</a></li>
+          <li><a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right-Side Actions -->
+      <div class="header-actions">
+        <!-- Language Switcher Dropdown -->
+        <div class="lang-selector-dropdown" id="langDropdownContainer">
+          <button class="lang-btn" id="langBtn" type="button" aria-expanded="false" aria-label="Select Language">
+            <i class="fa-solid fa-globe"></i>
+            <span id="currentLangLabel">English</span>
+            <i class="fa-solid fa-chevron-down" style="font-size: 0.72rem;"></i>
+          </button>
+          <ul class="lang-menu" id="langMenu">
+            <li class="lang-option active" data-lang="en">English</li>
+            <li class="lang-option" data-lang="ta">தமிழ் (Tamil)</li>
+            <li class="lang-option" data-lang="hi">हिन्दी (Hindi)</li>
+            <li class="lang-option" data-lang="te">తెలుగు (Telugu)</li>
+            <li class="lang-option" data-lang="ml">മലയാളം (Malayalam)</li>
+            <li class="lang-option" data-lang="kn">ಕನ್ನಡ (Kannada)</li>
+          </ul>
+        </div>
+
+        <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle Mobile Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav-drawer" id="mobileDrawer">
+    <div class="drawer-header">
+      <img src="assets/images/logo-horizontal.png" alt="STAR ELECTRICALS" style="height: 38px;">
+      <button class="modal-close-btn" id="closeDrawerBtn" aria-label="Close Menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Language Selector -->
+    <div style="margin-bottom: 16px;">
+      <span style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-bottom: 6px; display: block;">
+        <i class="fa-solid fa-globe" style="color: var(--primary-orange); margin-right: 4px;"></i> Select Language
+      </span>
+      <div class="mobile-lang-grid">
+        <button class="mobile-lang-btn active" data-lang="en">EN</button>
+        <button class="mobile-lang-btn" data-lang="ta">தமிழ்</button>
+        <button class="mobile-lang-btn" data-lang="hi">हिन्दी</button>
+        <button class="mobile-lang-btn" data-lang="te">తెలుగు</button>
+        <button class="mobile-lang-btn" data-lang="ml">മലയാളം</button>
+        <button class="mobile-lang-btn" data-lang="kn">ಕನ್ನಡ</button>
+      </div>
+    </div>
+
+    <ul class="drawer-links">
+      <li><a href="#home" class="drawer-link active" data-i18n="nav_home">Home</a></li>
+      <li><a href="#services" class="drawer-link" data-i18n="nav_services">Services</a></li>
+      <li><a href="#about" class="drawer-link" data-i18n="nav_about">About Us</a></li>
+      <li><a href="#products" class="drawer-link" data-i18n="nav_products">Products</a></li>
+      <li><a href="#projects" class="drawer-link" data-i18n="nav_projects">Projects</a></li>
+      <li><a href="#contact" class="drawer-link" data-i18n="nav_contact">Contact</a></li>
+    </ul>
+    <div class="drawer-footer">
+      <a href="tel:+917397525538" class="btn-phone-nav" style="justify-content: center;">
+        <i class="fa-solid fa-phone"></i>
+        <span>+91 73975 25538</span>
+      </a>
+      <button class="btn-primary open-quote-modal" style="width: 100%;">
+        <span data-i18n="btn_quote">Get a Quote</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+  </div>
+
+  <main>
+    <!-- ==========================================================================
+         HERO SECTION
+         ========================================================================== -->
+    <section class="hero-section" id="home">
+      <div class="hero-overlay"></div>
+      <div class="container hero-container">
+        <!-- Hero Primary Content -->
+        <div class="hero-content">
+          <span class="section-tag" data-i18n="hero_tag">STAR ELECTRICALS</span>
+          <h1 class="hero-title">
+            <span data-i18n="hero_title_1">Reliable Electrical</span>
+            <span class="text-orange" data-i18n="hero_title_2">Solutions for Every Need</span>
+          </h1>
+          <p class="hero-description" data-i18n="hero_desc">
+            Turnkey electrical engineering, industrial high-mast lighting (5m–30m), solar PV systems (1kW–MW), digital timers, and certified equipment supply across Tamil Nadu.
+          </p>
+
+          <!-- Project Highlights Pills -->
+          <div class="hero-project-pills">
+            <span class="hero-pill"><i class="fa-solid fa-tower-broadcast"></i> High-Mast Towers (5m–30m)</span>
+            <span class="hero-pill"><i class="fa-solid fa-solar-panel"></i> Solar PV & Storage (1kW–MW)</span>
+            <span class="hero-pill"><i class="fa-solid fa-lightbulb"></i> LED Street (24W–100W)</span>
+            <span class="hero-pill"><i class="fa-solid fa-stopwatch"></i> Timers (1,000W–40,000W)</span>
+          </div>
+
+          <div class="hero-buttons">
+            <button class="btn-primary open-quote-modal" type="button">
+              <i class="fa-regular fa-file-lines"></i>
+              <span data-i18n="btn_quote">Get a Quote</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+            <a href="tel:+917397525538" class="btn-outline-white">
+              <i class="fa-solid fa-phone"></i>
+              <span data-i18n="btn_call_us">Call Us</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SERVICES SECTION ("What We Do")
+         ========================================================================== -->
+    <section class="services-section" id="services">
+      <div class="container">
+        <div class="section-header-row">
+          <div>
+            <span class="section-tag" data-i18n="services_tag">OUR SERVICES</span>
+            <h2 class="section-title" data-i18n="services_title">What We Do</h2>
+          </div>
+          <p class="section-subtext" data-i18n="services_subtitle">
+            We provide complete electrical solutions with quality materials and professional service.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Card 1: Electrical Installation -->
+          <div class="service-card" onclick="selectServiceInForm('Electrical Installation')">
+            <div class="service-icon-wrapper icon-orange">
+              <i class="fa-solid fa-bolt"></i>
+            </div>
+            <h3 class="service-title" data-i18n="srv_1_title">Electrical Installation</h3>
+            <p class="service-desc" data-i18n="srv_1_desc">Residential, Commercial & Industrial</p>
+          </div>
+
+          <!-- Card 2: Solar Panel Solutions -->
+          <div class="service-card" onclick="selectServiceInForm('Solar Panel Solutions')">
+            <div class="service-icon-wrapper">
+              <i class="fa-solid fa-solar-panel" style="color: #0284c7;"></i>
+            </div>
+            <h3 class="service-title" data-i18n="srv_2_title">Solar Panel Solutions</h3>
+            <p class="service-desc" data-i18n="srv_2_desc">Supply, Installation and Maintenance</p>
+          </div>
+
+          <!-- Card 3: High-Mast Lighting -->
+          <div class="service-card" onclick="selectServiceInForm('High-Mast Lighting')">
+            <div class="service-icon-wrapper">
+              <i class="fa-solid fa-tower-broadcast" style="color: #0a1931;"></i>
+            </div>
+            <h3 class="service-title" data-i18n="srv_3_title">High-Mast Lighting</h3>
+            <p class="service-desc" data-i18n="srv_3_desc">Outdoor & Industrial Lighting Solutions</p>
+          </div>
+
+          <!-- Card 4: Automatic Timer Installation -->
+          <div class="service-card" onclick="selectServiceInForm('Automatic Timer Installation')">
+            <div class="service-icon-wrapper icon-orange">
+              <i class="fa-solid fa-stopwatch-20"></i>
+            </div>
+            <h3 class="service-title" data-i18n="srv_4_title">Automatic Timer Installation</h3>
+            <p class="service-desc" data-i18n="srv_4_desc">Energy Efficient Automation</p>
+          </div>
+
+          <!-- Card 5: Electrical Material Supply -->
+          <div class="service-card" onclick="selectServiceInForm('Electrical Material Supply')">
+            <div class="service-icon-wrapper">
+              <i class="fa-solid fa-plug" style="color: #0a1931;"></i>
+            </div>
+            <h3 class="service-title" data-i18n="srv_5_title">Electrical Material Supply</h3>
+            <p class="service-desc" data-i18n="srv_5_desc">All Types of Electrical Materials</p>
+          </div>
+
+          <!-- Card 6: Maintenance & Repair -->
+          <div class="service-card" onclick="selectServiceInForm('Maintenance & Repair')">
+            <div class="service-icon-wrapper">
+              <i class="fa-solid fa-gears" style="color: #0a1931;"></i>
+            </div>
+            <h3 class="service-title" data-i18n="srv_6_title">Maintenance & Repair</h3>
+            <p class="service-desc" data-i18n="srv_6_desc">Service and Troubleshooting</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ABOUT SECTION
+         ========================================================================== -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="about-layout">
+          <!-- Left Column: Technician Image -->
+          <div class="about-image-card">
+            <img src="assets/images/about-technician-hd.jpg" alt="STAR ELECTRICALS Certified Technician working on electrical panel" class="about-img">
+          </div>
+
+          <!-- Right Column: Content & Trust Indicators -->
+          <div class="about-content">
+            <span class="section-tag" data-i18n="about_tag">ABOUT US</span>
+            <h2 class="about-company-name" data-i18n="about_company">STAR ELECTRICALS</h2>
+            <p class="about-paragraph" data-i18n="about_desc">
+              We are a trusted electrical service and supply company based in Cuddalore, Tamil Nadu. We provide high-quality electrical materials, professional installation and service for homes, businesses, institutions and government projects.
+            </p>
+
+            <div class="about-bottom-row">
+              <!-- 4 Trust Indicators Grid -->
+              <div class="trust-indicators-grid">
+                <div class="trust-item">
+                  <i class="fa-solid fa-award trust-icon"></i>
+                  <span class="trust-label" data-i18n="trust_1">Quality Materials</span>
+                </div>
+                <div class="trust-item">
+                  <i class="fa-solid fa-users trust-icon"></i>
+                  <span class="trust-label" data-i18n="trust_2">Professional Team</span>
+                </div>
+                <div class="trust-item">
+                  <i class="fa-solid fa-shield-halved trust-icon"></i>
+                  <span class="trust-label" data-i18n="trust_3">Reliable Service</span>
+                </div>
+                <div class="trust-item">
+                  <i class="fa-solid fa-clock-rotate-left trust-icon"></i>
+                  <span class="trust-label" data-i18n="trust_4">On-Time Completion</span>
+                </div>
+              </div>
+
+              <!-- Side Highlight Box -->
+              <div class="side-highlight-card">
+                <h3 class="highlight-heading">
+                  <span data-i18n="highlight_title_1">Powering a Brighter</span>
+                  <span class="highlight-orange" data-i18n="highlight_title_2">Tomorrow</span>
+                </h3>
+                <p class="highlight-values" data-i18n="highlight_values">
+                  Safe. Reliable.<br>
+                  Efficient. Trusted.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         PRODUCTS SECTION ("Electrical Materials")
+         ========================================================================== -->
+    <section class="products-section" id="products">
+      <div class="container">
+        <div class="section-header-row">
+          <div>
+            <span class="section-tag" data-i18n="products_tag">OUR PRODUCTS</span>
+            <h2 class="section-title" data-i18n="products_title">Electrical Materials</h2>
+          </div>
+          <button class="btn-outline-navy open-quote-modal" type="button">
+            <span data-i18n="btn_view_products">View All Products</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+
+        <div class="products-grid">
+          <!-- Product 1: Cables & Wires -->
+          <div class="product-card" onclick="openProductModal('cables')">
+            <div class="product-image-container">
+              <img src="assets/images/product-cables-hd.jpg" alt="Cables & Wires" class="product-img">
+            </div>
+            <div class="product-card-body">
+              <span class="product-badge">Armored & Submersible</span>
+              <h3 class="product-title" data-i18n="prod_1">Cables & Wires</h3>
+              <p class="product-snippet">Copper & Aluminum power cables, flexible house wires, armored LT/HT and submersible pump cables.</p>
+              <div class="product-card-action">
+                <span>View Details</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 2: Switches & Sockets -->
+          <div class="product-card" onclick="openProductModal('switches')">
+            <div class="product-image-container">
+              <img src="assets/images/product-switches-hd.jpg" alt="Switches & Sockets" class="product-img">
+            </div>
+            <div class="product-card-body">
+              <span class="product-badge">Modular & Smart Touch</span>
+              <h3 class="product-title" data-i18n="prod_2">Switches & Sockets</h3>
+              <p class="product-snippet">Designer modular switches, touch automation, metal-clad waterproof sockets, and heavy-duty AC isolators.</p>
+              <div class="product-card-action">
+                <span>View Details</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 3: LED Lights -->
+          <div class="product-card" onclick="openProductModal('led')">
+            <div class="product-image-container">
+              <img src="assets/images/product-led-hd.jpg" alt="LED Lights" class="product-img">
+            </div>
+            <div class="product-card-body">
+              <span class="product-badge">24W–100W • 50W–400W</span>
+              <h3 class="product-title" data-i18n="prod_3">LED Lights</h3>
+              <p class="product-snippet">High-efficiency LED street lights (24W to 100W), heavy-duty focus flood lights (50W to 400W), and high bays.</p>
+              <div class="product-card-action">
+                <span>View Details</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 4: Distribution Panels & Energy Meters -->
+          <div class="product-card" onclick="openProductModal('panels')">
+            <div class="product-image-container">
+              <img src="assets/images/product-panels-hd.jpg" alt="Distribution Panels & Energy Meters" class="product-img">
+            </div>
+            <div class="product-card-body">
+              <span class="product-badge">Digital Meters & DB Panels</span>
+              <h3 class="product-title" data-i18n="prod_4">Distribution Panels & Energy Meters</h3>
+              <p class="product-snippet">Single & 3-phase digital energy meters, custom fabricated power distribution boards, phase changers & busbars.</p>
+              <div class="product-card-action">
+                <span>View Details</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 5: Solar Equipment -->
+          <div class="product-card" onclick="openProductModal('solar')">
+            <div class="product-image-container">
+              <img src="assets/images/product-solar-hd.jpg" alt="Solar Equipment" class="product-img">
+            </div>
+            <div class="product-card-body">
+              <span class="product-badge">1 kW to MW Scale</span>
+              <h3 class="product-title" data-i18n="prod_5">Solar Equipment</h3>
+              <p class="product-snippet">Tier-1 Mono PERC solar panels, hybrid inverters & scalable battery energy storage systems from 1 kW up to MW scale.</p>
+              <div class="product-card-action">
+                <span>View Details</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 6: Automatic Timers -->
+          <div class="product-card" onclick="openProductModal('timers')">
+            <div class="product-image-container">
+              <img src="assets/images/product-timers-hd.jpg" alt="Automatic Timers" class="product-img">
+            </div>
+            <div class="product-card-body">
+              <span class="product-badge">1,000W to 40,000W</span>
+              <h3 class="product-title" data-i18n="prod_6">Automatic Timers</h3>
+              <p class="product-snippet">Astronomical & digital programmable timers rated 1,000W to 40,000W (1kW–40kW) for street lights & pump automation.</p>
+              <div class="product-card-action">
+                <span>View Details</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 7: High-Mast & Street Poles -->
+          <div class="product-card" onclick="openProductModal('poles')">
+            <div class="product-image-container">
+              <img src="assets/images/product-pole-hd.jpg" alt="High-Mast & Street Poles" class="product-img">
+            </div>
+            <div class="product-card-body">
+              <span class="product-badge">5m to 30m Height</span>
+              <h3 class="product-title" data-i18n="prod_8">High-Mast & Street Poles</h3>
+              <p class="product-snippet">Galvanized high mast lighting poles (5m to 30m), octagonal street poles, tubular poles, brackets & winch systems.</p>
+              <div class="product-card-action">
+                <span>View Details</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 8: Other Materials -->
+          <div class="product-card" onclick="openProductModal('other')">
+            <div class="product-image-container">
+              <img src="assets/images/product-other-hd.jpg" alt="Other Materials" class="product-img">
+            </div>
+            <div class="product-card-body">
+              <span class="product-badge">Trays, Pipes & Earthing</span>
+              <h3 class="product-title" data-i18n="prod_7">Other Materials</h3>
+              <p class="product-snippet">Perforated GI cable trays, conduit pipes, chemical earthing electrodes, lightning arrestors & electrical lugs.</p>
+              <div class="product-card-action">
+                <span>View Details</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         PROJECTS SECTION ("Recent Works")
+         ========================================================================== -->
+    <section class="projects-section" id="projects">
+      <div class="container">
+        <div class="section-header-row">
+          <div>
+            <span class="section-tag" data-i18n="projects_tag">OUR PROJECTS</span>
+            <h2 class="section-title" data-i18n="projects_title">Recent Works</h2>
+          </div>
+          <button class="btn-outline-navy open-quote-modal" type="button">
+            <span data-i18n="btn_view_projects">View More Projects</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: Solar Panel Installation (1kW to MW) -->
+          <div class="project-card" onclick="openProjectLightbox('solar-rooftop')">
+            <div class="project-image-box">
+              <span class="project-badge-overlay">1 kW – MW Scale</span>
+              <img src="assets/images/project-solar-residential-hd.jpg" alt="Solar Panel Installation" class="project-img">
+            </div>
+            <div class="project-info">
+              <h3 class="project-title" data-i18n="proj_1_title">Solar Panel Installation</h3>
+              <span class="project-category" data-i18n="proj_1_cat">Residential & Commercial Rooftop (1kW–MW)</span>
+            </div>
+          </div>
+
+          <!-- Project 2: High-Mast Lighting Towers (5m to 30m) -->
+          <div class="project-card" onclick="openProjectLightbox('high-mast')">
+            <div class="project-image-box">
+              <span class="project-badge-overlay">5m to 30m Height</span>
+              <img src="assets/images/project-highmast-industrial-hd.jpg" alt="High-Mast Lighting Towers" class="project-img">
+            </div>
+            <div class="project-info">
+              <h3 class="project-title" data-i18n="proj_2_title">High-Mast Lighting Towers</h3>
+              <span class="project-category" data-i18n="proj_2_cat">Industrial & Highway Projects (5m–30m)</span>
+            </div>
+          </div>
+
+          <!-- Project 4: Municipal LED Street Lighting (24W to 100W) -->
+          <div class="project-card" onclick="openProjectLightbox('street-lighting')">
+            <div class="project-image-box">
+              <span class="project-badge-overlay">24W – 100W LED & Poles</span>
+              <img src="assets/images/project-street-lighting-hd.jpg" alt="Municipal LED Street Lighting" class="project-img">
+            </div>
+            <div class="project-info">
+              <h3 class="project-title" data-i18n="proj_4_title">Municipal LED Street Lighting</h3>
+              <span class="project-category" data-i18n="proj_4_cat">Smart Street Lighting (24W–100W)</span>
+            </div>
+          </div>
+
+          <!-- Project 5: Automated Astronomical Timers (1,000W to 40,000W) -->
+          <div class="project-card" onclick="openProjectLightbox('automatic-timers')">
+            <div class="project-image-box">
+              <span class="project-badge-overlay">1,000W – 40,000W</span>
+              <img src="assets/images/product-timers-hd.jpg" alt="Automated Astronomical Timers" class="project-img">
+            </div>
+            <div class="project-info">
+              <h3 class="project-title" data-i18n="proj_5_title">Automated Astronomical Timers</h3>
+              <span class="project-category" data-i18n="proj_5_cat">Pump & Light Scheduling (1kW–40kW)</span>
+            </div>
+          </div>
+
+          <!-- Project 6: Institutional Solar & Battery Storage -->
+          <div class="project-card" onclick="openProjectLightbox('institutional-solar')">
+            <div class="project-image-box">
+              <span class="project-badge-overlay">Battery Storage</span>
+              <img src="assets/images/project-solar-institutional-hd.jpg" alt="Institutional Solar & Storage" class="project-img">
+            </div>
+            <div class="project-info">
+              <h3 class="project-title" data-i18n="proj_6_title">Institutional Solar & Storage</h3>
+              <span class="project-category" data-i18n="proj_6_cat">Institutional & Utility Scale</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CONTACT / CTA SECTION ("Need Electrical Service?")
+         ========================================================================== -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="quote-section-wrapper">
+          <div class="quote-section-header">
+            <span class="section-tag" style="color: #ff9933;" data-i18n="contact_tag">GET IN TOUCH</span>
+            <h2 class="contact-title" data-i18n="form_title">Request a Quote</h2>
+            <p class="contact-description" data-i18n="contact_desc">
+              Contact STAR ELECTRICALS today for a free consultation or quote. We are here to help you with the best electrical solutions.
+            </p>
+          </div>
+
+          <!-- Request a Quote Form Card -->
+          <div class="quote-form-card">
+            <form class="quote-form" id="quoteForm" onsubmit="handleQuoteSubmit(event)">
+              <div class="form-row-2col">
+                <input type="text" id="formName" class="form-input" placeholder="Your Name" data-i18n-placeholder="placeholder_name" required>
+                <input type="tel" id="formPhone" class="form-input" placeholder="Phone Number" data-i18n-placeholder="placeholder_phone" required>
+              </div>
+              <div class="form-row-2col">
+                <input type="email" id="formEmail" class="form-input" placeholder="Email Address" data-i18n-placeholder="placeholder_email">
+                <select id="formService" class="form-select" required>
+                  <option value="" disabled selected data-i18n="select_service">Select Service</option>
+                  <option value="Electrical Installation">Electrical Installation</option>
+                  <option value="Solar Panel Solutions">Solar Panel Solutions</option>
+                  <option value="High-Mast Lighting">High-Mast Lighting</option>
+                  <option value="High-Mast & Poles Supply">High-Mast & Poles Supply</option>
+                  <option value="LED & Focus Lighting">LED & Focus Lighting</option>
+                  <option value="Automatic Timer Installation">Automatic Timer Installation</option>
+                  <option value="Electrical Material Supply">Electrical Material Supply</option>
+                  <option value="Maintenance & Repair">Maintenance & Repair</option>
+                  <option value="Other Inquiries">Other Inquiries</option>
+                </select>
+              </div>
+              <textarea id="formMessage" class="form-textarea" placeholder="Your Message" data-i18n-placeholder="placeholder_msg" rows="3"></textarea>
+              
+              <div class="form-actions-row">
+                <button type="submit" class="btn-form-submit" id="btnSubmitQuote">
+                  <span data-i18n="btn_send_request">Send Request to Email</span>
+                  <i class="fa-solid fa-paper-plane"></i>
+                </button>
+                <button type="button" class="btn-wa-submit" onclick="sendQuoteViaWhatsApp('quoteForm')" title="Send quote directly to WhatsApp">
+                  <i class="fa-brands fa-whatsapp"></i>
+                  <span>Send via WhatsApp</span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <!-- Main Footer Columns -->
+      <div class="footer-main-grid">
+        <!-- Col 1: Company Profile & Socials -->
+        <div class="footer-col footer-col-about">
+          <div class="footer-logo-box">
+            <img src="assets/images/logo-horizontal-white.png" alt="STAR ELECTRICALS" class="footer-logo-img" onerror="this.src='assets/images/logo-white.png'">
+          </div>
+          <p class="footer-about-text">
+            STAR ELECTRICALS is a trusted turnkey electrical engineering and government-approved contractor based in Cuddalore, Tamil Nadu. Specializing in high-mast lighting towers (5m–30m), solar PV plants (1kW–MW), digital timers, distribution panels, and certified material supply.
+          </p>
+          <div class="footer-badges">
+            <span class="footer-badge"><i class="fa-solid fa-shield-halved"></i> IS / ISI Certified</span>
+            <span class="footer-badge"><i class="fa-solid fa-solar-panel"></i> MNRE Compliant</span>
+          </div>
+          <div class="footer-social-links">
+            <a href="https://www.facebook.com/share/1Vz6Le31kJ/" target="_blank" rel="noopener" class="social-icon-btn fb" title="Facebook" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://wa.me/917397525538" target="_blank" rel="noopener" class="social-icon-btn wa" title="WhatsApp" aria-label="WhatsApp">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="https://www.instagram.com/star_electrical801?stkn=MTY3cGUxZndmcHlkZw==" target="_blank" rel="noopener" class="social-icon-btn ig" title="Instagram" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="mailto:starelectrical801@gmail.com" class="social-icon-btn em" title="Email Us" aria-label="Email">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links Navigation -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="#home"><i class="fa-solid fa-angle-right"></i> <span data-i18n="nav_home">Home</span></a></li>
+            <li><a href="#services"><i class="fa-solid fa-angle-right"></i> <span data-i18n="nav_services">Our Services</span></a></li>
+            <li><a href="#about"><i class="fa-solid fa-angle-right"></i> <span data-i18n="nav_about">About Us</span></a></li>
+            <li><a href="#products"><i class="fa-solid fa-angle-right"></i> <span data-i18n="nav_products">Products & Materials</span></a></li>
+            <li><a href="#projects"><i class="fa-solid fa-angle-right"></i> <span data-i18n="nav_projects">Recent Projects</span></a></li>
+            <li><a href="#contact"><i class="fa-solid fa-angle-right"></i> <span data-i18n="nav_contact">Contact Us</span></a></li>
+            <li><a href="javascript:void(0)" onclick="openQuoteModal()"><i class="fa-solid fa-angle-right"></i> <span>Get a Free Quote</span></a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Key Solutions & Equipment -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Our Solutions</h4>
+          <ul class="footer-links-list">
+            <li><a href="javascript:void(0)" onclick="openProductModal('poles')"><i class="fa-solid fa-angle-right"></i> <span>High-Mast Towers (5m–30m)</span></a></li>
+            <li><a href="javascript:void(0)" onclick="openProductModal('solar')"><i class="fa-solid fa-angle-right"></i> <span>Solar Power Plants (1kW–MW)</span></a></li>
+            <li><a href="javascript:void(0)" onclick="openProductModal('led')"><i class="fa-solid fa-angle-right"></i> <span>LED Street & Focus Lights</span></a></li>
+            <li><a href="javascript:void(0)" onclick="openProductModal('timers')"><i class="fa-solid fa-angle-right"></i> <span>Astronomical Timers (1kW–40kW)</span></a></li>
+            <li><a href="javascript:void(0)" onclick="openProductModal('panels')"><i class="fa-solid fa-angle-right"></i> <span>Distribution & Energy Meters</span></a></li>
+            <li><a href="javascript:void(0)" onclick="openProductModal('cables')"><i class="fa-solid fa-angle-right"></i> <span>Cables & Industrial Wires</span></a></li>
+            <li><a href="javascript:void(0)" onclick="openProductModal('other')"><i class="fa-solid fa-angle-right"></i> <span>Earthing & Cable Trays</span></a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Corporate Headquarters & Hours -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Head Office</h4>
+          <ul class="footer-contact-list">
+            <li class="footer-contact-item">
+              <i class="fa-solid fa-location-dot footer-contact-icon"></i>
+              <div>
+                <strong class="footer-contact-label">Office Address:</strong>
+                <a href="https://www.google.com/maps/search/?api=1&query=STAR+ELECTRICALS+3G%2F1+Easwaran+Koil+Street+Bhuvanagiri+608601+Cuddalore+Tamil+Nadu" target="_blank" rel="noopener" class="footer-map-link" title="Open Office Location in Google Maps">
+                  <span>3G/1, Easwaran Koil Street, Bhuvanagiri - 608601, Cuddalore-Dt, Tamil Nadu</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.72rem; color: var(--primary-orange); margin-left: 4px;"></i>
+                </a>
+              </div>
+            </li>
+            <li class="footer-contact-item">
+              <i class="fa-solid fa-phone footer-contact-icon"></i>
+              <div>
+                <strong class="footer-contact-label">Phone Inquiry:</strong>
+                <a href="tel:+917397525538" style="font-weight: 600; color: #ffffff;">+91 73975 25538 <span style="font-size: 0.72rem; color: var(--primary-orange); font-weight: 700; text-transform: uppercase; margin-left: 4px;">(Primary)</span></a><br>
+                <a href="tel:+919789692316">+91 97896 92316</a>
+              </div>
+            </li>
+            <li class="footer-contact-item">
+              <i class="fa-solid fa-envelope footer-contact-icon"></i>
+              <div>
+                <strong class="footer-contact-label">Email Support:</strong>
+                <a href="mailto:starelectrical801@gmail.com">starelectrical801@gmail.com</a>
+              </div>
+            </li>
+            <li class="footer-contact-item">
+              <i class="fa-solid fa-clock footer-contact-icon"></i>
+              <div>
+                <strong class="footer-contact-label">Working Hours:</strong>
+                <span>Mon – Sat: 8:30 AM – 8:30 PM</span><br>
+                <a href="tel:+917397525538" class="footer-emergency-call" title="Emergency Electrical Breakdown Callout">
+                  <i class="fa-solid fa-phone-volume"></i> <span>24/7 Breakdown & Emergency: <strong>+91 73975 25538</strong></span>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Sub-bar -->
+      <div class="footer-bottom-bar">
+        <div class="footer-bottom-copy">
+          <p data-i18n="footer_copyright">&copy; 2026 STAR ELECTRICALS. All Rights Reserved.</p>
+          <span class="footer-bottom-sub">Turnkey Electrical, Solar & High-Mast Lighting Engineering</span>
+        </div>
+        <div class="footer-bottom-badges">
+          <a href="https://www.google.com/maps/search/?api=1&query=Bhuvanagiri+Cuddalore+Tamil+Nadu" target="_blank" rel="noopener" class="footer-bottom-location-link" title="View on Google Maps">
+            <span data-i18n="footer_location"><i class="fa-solid fa-location-dot" style="color: var(--primary-orange);"></i> Cuddalore, Tamil Nadu</span>
+          </a>
+          <span class="footer-dot">•</span>
+          <span>ISO / IS Compliant</span>
+          <span class="footer-dot">•</span>
+          <a href="#home" class="btn-back-to-top" title="Back to top">
+            <span>Back to top</span>
+            <i class="fa-solid fa-arrow-up"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MODALS & FLOATING ACTIONS
+       ========================================================================== -->
+
+  <!-- Interactive Quote Modal -->
+  <div class="modal-overlay" id="quoteModalOverlay">
+    <div class="modal-container">
+      <button class="modal-close-btn" onclick="closeQuoteModal()" aria-label="Close Modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <h3 class="form-card-title" style="margin-top: 6px;" data-i18n="modal_title">Request a Quick Quote</h3>
+      <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 20px;" data-i18n="modal_desc">
+        Fill in your requirements below and our technical team will get back to you promptly.
+      </p>
+      <form class="quote-form" id="modalQuoteForm" onsubmit="handleModalQuoteSubmit(event)">
+        <input type="text" id="modalName" class="form-input" placeholder="Your Name" data-i18n-placeholder="placeholder_name" required>
+        <input type="tel" id="modalPhone" class="form-input" placeholder="Phone Number" data-i18n-placeholder="placeholder_phone" required>
+        <input type="email" id="modalEmail" class="form-input" placeholder="Email Address" data-i18n-placeholder="placeholder_email">
+        <select id="modalService" class="form-select" required>
+          <option value="" disabled selected data-i18n="select_service">Select Service Required</option>
+          <option value="Electrical Installation">Electrical Installation</option>
+          <option value="Solar Panel Solutions">Solar Panel Solutions</option>
+          <option value="High-Mast Lighting">High-Mast Lighting</option>
+          <option value="High-Mast & Poles Supply">High-Mast & Poles Supply</option>
+          <option value="LED & Focus Lighting">LED & Focus Lighting</option>
+          <option value="Automatic Timer Installation">Automatic Timer Installation</option>
+          <option value="Electrical Material Supply">Electrical Material Supply</option>
+          <option value="Maintenance & Repair">Maintenance & Repair</option>
+          <option value="General Inquiries">General Inquiries</option>
+        </select>
+        <textarea id="modalMessage" class="form-textarea" placeholder="Briefly describe your project or required materials" data-i18n-placeholder="placeholder_modal_msg" rows="3"></textarea>
+        <div class="form-actions-row">
+          <button type="submit" class="btn-form-submit" id="btnSubmitModalQuote">
+            <span data-i18n="btn_submit_request">Send Request to Email</span>
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+          <button type="button" class="btn-wa-submit" onclick="sendQuoteViaWhatsApp('modalQuoteForm')" title="Send quote directly to WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>Send via WhatsApp</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Project & Product Detail Lightbox Modal -->
+  <div class="modal-overlay" id="detailLightbox">
+    <div class="modal-container" style="max-width: 640px; max-height: 90vh; overflow-y: auto;">
+      <button class="modal-close-btn" onclick="closeDetailLightbox()" aria-label="Close Lightbox">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div id="lightboxContent" style="margin-top: 10px;">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Box -->
+  <div class="toast-box" id="toastBox">
+    <i class="fa-solid fa-circle-check" style="color: #22c55e; font-size: 1.3rem;"></i>
+    <span id="toastMessage">Your request has been submitted successfully!</span>
+  </div>
+
+  <!-- Multilingual Data and Core Scripts -->
+  <script src="translations.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
