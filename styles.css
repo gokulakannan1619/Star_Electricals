@@ -1134,6 +1134,147 @@ button {
   transform: translateY(-2px);
 }
 
+/* B2B Directory Trust Strip under Quote Form */
+.quote-b2b-trust-strip {
+  margin-top: 24px;
+  padding: 16px 20px;
+  background-color: #ffffff;
+  border-radius: var(--radius-lg);
+  border: 1px dashed #cbd5e1;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.b2b-trust-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.b2b-trust-title i {
+  color: var(--primary-orange);
+  font-size: 0.95rem;
+}
+
+.b2b-trust-chips {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.b2b-trust-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 16px;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--border-light);
+  background-color: #f8fafc;
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  flex: 1;
+  max-width: 270px;
+  min-width: 200px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+.b2b-trust-chip:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.b2b-trust-chip.im:hover {
+  border-color: #00a699;
+  background-color: #f0faf9;
+}
+
+.b2b-trust-chip.jd:hover {
+  border-color: #ff6a00;
+  background-color: #fff9f4;
+}
+
+.b2b-chip-badge {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.85rem;
+  letter-spacing: -0.02em;
+  flex-shrink: 0;
+  color: #ffffff;
+}
+
+.b2b-chip-badge.im-tag {
+  background: linear-gradient(135deg, #00a699 0%, #0d5f57 100%);
+  border: 1px solid rgba(0, 166, 153, 0.4);
+}
+
+.b2b-chip-badge.jd-tag {
+  background: linear-gradient(135deg, #ff7a00 0%, #d84315 100%);
+  border: 1px solid rgba(255, 106, 0, 0.4);
+}
+
+.b2b-chip-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  line-height: 1.25;
+  flex: 1;
+}
+
+.b2b-chip-info strong {
+  font-size: 0.9rem;
+  color: var(--primary-navy);
+}
+
+.b2b-chip-info .b2b-sub {
+  font-size: 0.74rem;
+  color: #64748b;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.b2b-chip-info .b2b-sub i {
+  font-size: 0.72rem;
+}
+
+.b2b-trust-chip.im .b2b-sub i {
+  color: #00a699;
+}
+
+.b2b-trust-chip.jd .b2b-sub i {
+  color: #f59e0b;
+}
+
+.chip-ext-icon {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  transition: transform var(--transition-fast);
+}
+
+.b2b-trust-chip:hover .chip-ext-icon {
+  color: var(--primary-orange);
+  transform: translate(2px, -2px);
+}
+
 /* ==========================================================================
    8. PROFESSIONAL BUSINESS FOOTER
    ========================================================================== */
@@ -1207,6 +1348,29 @@ button {
   font-size: 0.78rem;
 }
 
+.footer-badge-link {
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.footer-badge-link:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.footer-badge-link.im-badge:hover {
+  border-color: #00a699;
+  color: #00d2be;
+}
+
+.footer-badge-link.jd-badge:hover {
+  border-color: #ff6a00;
+  color: #ffaa5b;
+}
+
 .footer-social-links {
   display: flex;
   align-items: center;
@@ -1236,6 +1400,39 @@ button {
 .social-icon-btn.wa:hover { background-color: #25d366; border-color: #25d366; }
 .social-icon-btn.ig:hover { background-color: #e4405f; border-color: #e4405f; }
 .social-icon-btn.em:hover { background-color: var(--primary-orange); border-color: var(--primary-orange); }
+
+.social-icon-btn.im {
+  background-color: rgba(0, 166, 153, 0.12);
+  border-color: rgba(0, 166, 153, 0.35);
+  color: #00d2be;
+}
+
+.social-icon-btn.im:hover {
+  background-color: #00a699;
+  border-color: #00a699;
+  color: #ffffff;
+}
+
+.social-icon-btn.jd {
+  background-color: rgba(255, 106, 0, 0.12);
+  border-color: rgba(255, 106, 0, 0.35);
+  color: #ff9933;
+}
+
+.social-icon-btn.jd:hover {
+  background-color: #ff6a00;
+  border-color: #ff6a00;
+  color: #ffffff;
+}
+
+.b2b-btn-text {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.82rem;
+  letter-spacing: -0.02em;
+  display: inline-block;
+  line-height: 1;
+}
 
 .footer-col-title {
   font-family: var(--font-heading);
@@ -1487,6 +1684,68 @@ button {
 .modal-close-btn:hover {
   background-color: var(--primary-orange);
   color: #ffffff;
+}
+
+/* Modal B2B Trust Note */
+.modal-trust-note {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.modal-trust-note > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+}
+
+.modal-trust-links {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.modal-trust-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.modal-trust-link:hover {
+  color: var(--primary-orange);
+}
+
+.modal-chip-badge {
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 1px 4px;
+  border-radius: 3px;
+  color: #ffffff;
+  display: inline-block;
+  line-height: 1.1;
+}
+
+.modal-chip-badge.im-tag {
+  background-color: #00a699;
+}
+
+.modal-chip-badge.jd-tag {
+  background-color: #ff6a00;
+}
+
+.modal-trust-dot {
+  color: var(--border-light);
 }
 
 /* Toast Notification */
@@ -1841,9 +2100,25 @@ button {
   .quote-form-card {
     padding: 24px 18px;
   }
+  .quote-b2b-trust-strip {
+    padding: 14px;
+  }
+  .b2b-trust-chips {
+    flex-direction: column;
+    width: 100%;
+  }
+  .b2b-trust-chip {
+    max-width: 100%;
+    width: 100%;
+  }
   .modal-container {
     padding: 24px 16px;
     border-radius: var(--radius-lg);
+  }
+  .modal-trust-note {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
   }
 }
 

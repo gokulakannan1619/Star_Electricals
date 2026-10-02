@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://starelectrical.net.in/sitemap.xml
