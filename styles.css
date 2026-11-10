@@ -461,7 +461,7 @@ button {
   position: relative;
   min-height: 520px;
   background-color: var(--primary-navy);
-  background-image: url('assets/images/hero-bg-hd.jpg');
+  background-image: image-set(url('assets/images/hero-bg-hd.webp') type('image/webp'), url('assets/images/hero-bg-hd.jpg') type('image/jpeg'));
   background-size: cover;
   background-position: center right;
   background-repeat: no-repeat;

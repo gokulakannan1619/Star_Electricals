@@ -123,6 +123,22 @@ const langDisplayNames = {
   kn: "ಕನ್ನಡ"
 };
 
+function getSavedLanguage() {
+  try {
+    return localStorage.getItem('star_elect_lang') || 'en';
+  } catch {
+    return 'en';
+  }
+}
+
+function saveLanguage(lang) {
+  try {
+    localStorage.setItem('star_elect_lang', lang);
+  } catch {
+    // Language selection remains usable when browser storage is unavailable.
+  }
+}
+
 function initLanguageSwitcher() {
   const langDropdownContainer = document.getElementById('langDropdownContainer');
   const langBtn = document.getElementById('langBtn');
@@ -164,7 +180,7 @@ function initLanguageSwitcher() {
   });
 
   // Load Initial Language (Stored or Default)
-  const savedLang = localStorage.getItem('star_elect_lang') || 'en';
+  const savedLang = getSavedLanguage();
   setLanguage(savedLang);
 }
 
@@ -189,7 +205,7 @@ function setLanguage(lang) {
 
   const dict = translations[lang];
   document.documentElement.lang = lang;
-  localStorage.setItem('star_elect_lang', lang);
+  saveLanguage(lang);
 
   // Update current language label
   const currentLangLabel = document.getElementById('currentLangLabel');
@@ -288,7 +304,7 @@ const productsCatalog = {
     category: "LIGHTING SOLUTIONS",
     title: "LED Street & Focus Lights",
     badge: "24W to 400W",
-    image: "assets/images/product-led-hd.jpg",
+    image: "assets/images/product-led-hd.webp",
     description: "High-power energy-efficient outdoor and industrial LED lighting engineered for superior lumen output, extended operational lifespan, and heavy weather resistance.",
     specs: [
       "LED Street Lights: 24W to 400W (High Lumen)",
@@ -305,7 +321,7 @@ const productsCatalog = {
     category: "INFRASTRUCTURE & LIGHTING",
     title: "High-Mast & Lighting Poles",
     badge: "5m to 30m Height",
-    image: "assets/images/product-pole-hd.jpg",
+    image: "assets/images/product-pole-hd.webp",
     description: "Heavy-duty hot-dip galvanized steel high-mast towers and octagonal/tubular poles engineered to withstand high wind velocities for highways, stadiums, and industrial yards.",
     specs: [
       "High Mast Poles: 5m to 30m Height Available",
@@ -322,7 +338,7 @@ const productsCatalog = {
     category: "RENEWABLE ENERGY",
     title: "Solar Panels, Inverters & Battery Storage",
     badge: "1 kW to Multi-MW",
-    image: "assets/images/product-solar-hd.jpg",
+    image: "assets/images/product-solar-hd.webp",
     description: "Tier-1 solar photovoltaic panels, hybrid and grid-tie inverters, and scalable battery energy storage systems (BESS) from residential rooftop setups up to multi-megawatt industrial solar plants.",
     specs: [
       "Mono PERC, TOPCon & Bifacial Solar PV Panels",
@@ -339,7 +355,7 @@ const productsCatalog = {
     category: "AUTOMATION & CONTROL",
     title: "Automatic Timers",
     badge: "1,000W to 4,000W",
-    image: "assets/images/product-timers-hd.jpg",
+    image: "assets/images/product-timers-hd.webp",
     description: "Astronomical and programmable digital timer switches designed for automated dawn-to-dusk control and cyclic scheduling of electrical loads without manual intervention.",
     specs: [
       "Load Capacity: 1,000W to 4,000W (1 kW to 4 kW)",
@@ -356,7 +372,7 @@ const productsCatalog = {
     category: "SWITCHGEAR & METERING",
     title: "Distribution Panels & Energy Meters",
     badge: "Digital Meters & DB Panels",
-    image: "assets/images/product-panels-hd.jpg",
+    image: "assets/images/product-panels-hd.webp",
     description: "Precision digital energy meters, custom power distribution boards, motor control centers, and phase changers for residential, commercial, and industrial electrical systems.",
     specs: [
       "Single-Phase & 3-Phase Digital Energy Meters",
@@ -373,7 +389,7 @@ const productsCatalog = {
     category: "ELECTRICAL MATERIAL",
     title: "Cables & Wires",
     badge: "Armored & Submersible",
-    image: "assets/images/product-cables-hd.jpg",
+    image: "assets/images/product-cables-hd.webp",
     description: "Copper and Aluminum insulated power transmission conductors, flexible house wiring, armored underground cables, and submersible pump flat cables.",
     specs: [
       "Armored Power Cables (LT & HT Under-Ground)",
@@ -390,7 +406,7 @@ const productsCatalog = {
     category: "WIRING DEVICES",
     title: "Switches & Sockets",
     badge: "Modular & Smart Touch",
-    image: "assets/images/product-switches-hd.jpg",
+    image: "assets/images/product-switches-hd.webp",
     description: "Modern designer modular switch plates, smart WiFi/touch automation controllers, metal-clad industrial high-amp sockets, and heavy-duty motor isolators.",
     specs: [
       "Designer Modular Switch Plates & Luxury Touches",
@@ -407,7 +423,7 @@ const productsCatalog = {
     category: "HARDWARE & ACCESSORIES",
     title: "Other Electrical Materials",
     badge: "Trays, Conduits & Earthing",
-    image: "assets/images/product-other-hd.jpg",
+    image: "assets/images/product-other-hd.webp",
     description: "Complete inventory of commercial electrical installation hardware including cable trays, conduit pipes, chemical earthing electrodes, lugs, and safety equipment.",
     specs: [
       "Perforated & Ladder-Type Hot-Dip GI Cable Trays",
@@ -440,7 +456,7 @@ function openProductModal(productKey) {
     content.innerHTML = `
       <div style="text-align: left;">
         <div style="width: 100%; height: 180px; border-radius: var(--radius-md); overflow: hidden; margin-bottom: 16px; background: #f8fafc; border: 1px solid var(--border-light); display: flex; align-items: center; justify-content: center; padding: 12px;">
-          <img src="${prod.image}" alt="${prod.title}" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+          <img loading="lazy" decoding="async" src="${prod.image}" alt="${prod.title}" style="max-width: 100%; max-height: 100%; object-fit: contain;">
         </div>
         <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 6px;">
           <span class="section-tag" style="margin-bottom: 0;">${prod.category}</span>
@@ -498,7 +514,7 @@ const projectsCatalog = {
     title: 'Solar PV & Hybrid Inverter Systems',
     category: 'RESIDENTIAL & COMMERCIAL ROOFTOP',
     badge: '1 kW to MW Scale',
-    image: 'assets/images/project-solar-residential-hd.jpg',
+    image: 'assets/images/project-solar-residential-hd.webp',
     description: 'Turnkey rooftop and ground-mounted solar photovoltaic installations. Engineered with high-efficiency Mono PERC / TOPCon bifacial modules, hybrid grid-tied inverters, and battery storage configurations ranging from 1 kW residential setups to industrial megawatt projects.',
     specs: [
       'Capacity Scalability: 1 kW Rooftop to MW Ground Mount',
@@ -514,7 +530,7 @@ const projectsCatalog = {
     title: 'High-Mast Lighting Towers',
     category: 'INDUSTRIAL & HIGHWAY ILLUMINATION',
     badge: '5m to 30m Height',
-    image: 'assets/images/project-highmast-industrial-hd.jpg',
+    image: 'assets/images/project-highmast-industrial-hd.webp',
     description: 'Fabrication, civil foundation casting, erection, and commissioning of heavy-duty polygonal galvanized high-mast lighting towers and street poles. Tailored for highway junctions, industrial yards, sports arenas, and toll plazas across Tamil Nadu.',
     specs: [
       'High-Mast Tower Heights: 5 meters to 30 meters',
@@ -530,7 +546,7 @@ const projectsCatalog = {
     title: 'Municipal LED Street Lighting & Poles',
     category: 'SMART MUNICIPAL INFRASTRUCTURE',
     badge: '24W – 400W LED & Poles',
-    image: 'assets/images/project-street-lighting-hd.jpg',
+    image: 'assets/images/project-street-lighting-hd.webp',
     description: 'Government and municipal road lighting projects featuring energy-efficient 24W to 400W outdoor LED street luminaires & poles, octagonal hot-dip galvanized poles, underground armored cable routing, and automated sectional switching.',
     specs: [
       'LED Street Light Luminaires: 24W to 400W High-Lumen Fixtures',
@@ -546,7 +562,7 @@ const projectsCatalog = {
     title: 'Automated Astronomical Timer Panels',
     category: 'HEAVY LOAD & PUMP AUTOMATION',
     badge: '1,000W to 4,000W',
-    image: 'assets/images/product-timers-hd.jpg',
+    image: 'assets/images/product-timers-hd.webp',
     description: 'Automated scheduling panels using astronomical and programmable micro-controller timers. Engineered for street light grids, warehouse lighting, and agricultural motor pump automation with capacities from 1 kW up to 4 kW.',
     specs: [
       'Rated Load Switching: 1,000W to 4,000W (1 kW to 4 kW)',
@@ -562,7 +578,7 @@ const projectsCatalog = {
     title: 'Institutional Solar & Battery Microgrid',
     category: 'INSTITUTIONAL & UTILITY SCALE',
     badge: 'Battery Storage Microgrid',
-    image: 'assets/images/project-solar-institutional-hd.jpg',
+    image: 'assets/images/project-solar-institutional-hd.webp',
     description: 'High-capacity clean energy systems for educational campuses, hospitals, and commercial facilities. Featuring integrated solar array networks, heavy-duty industrial inverters, and battery energy storage for 24/7 continuous mission-critical power.',
     specs: [
       'Multi-Rooftop Solar Array Integration with Microgrid Support',
@@ -587,7 +603,7 @@ function openProjectLightbox(projectKey, categoryFallback, imageFallback) {
     title: projectKey || 'Featured Electrical Project',
     category: categoryFallback || 'PROJECT SHOWCASE',
     badge: 'Turnkey Execution',
-    image: imageFallback || 'assets/images/project-solar-residential-hd.jpg',
+    image: imageFallback || 'assets/images/project-solar-residential-hd.webp',
     description: 'Executed with certified high-grade components, rigorous safety compliance, precision engineering, and dedicated ongoing maintenance by STAR ELECTRICALS.',
     specs: [
       'High-Grade Certified Components & IS/ISI Standards',
@@ -609,7 +625,7 @@ function openProjectLightbox(projectKey, categoryFallback, imageFallback) {
     content.innerHTML = `
       <div style="text-align: left;">
         <div style="width: 100%; height: 220px; border-radius: var(--radius-md); overflow: hidden; margin-bottom: 16px; border: 1px solid var(--border-light); background: #0f172a; position: relative;">
-          <img src="${proj.image}" alt="${proj.title}" style="width: 100%; height: 100%; object-fit: cover;">
+          <img loading="lazy" decoding="async" src="${proj.image}" alt="${proj.title}" style="width: 100%; height: 100%; object-fit: cover;">
           <span style="position: absolute; top: 12px; left: 12px; background: rgba(10, 25, 49, 0.88); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border: 1px solid rgba(255, 255, 255, 0.25); color: #ffaa5b; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.05em; padding: 4px 10px; border-radius: var(--radius-full); text-transform: uppercase;">
             ${proj.badge}
           </span>
@@ -685,7 +701,7 @@ async function sendQuoteEmail(quoteData, submitBtn, formElement) {
       body: JSON.stringify(payload)
     });
 
-    const currentLang = localStorage.getItem('star_elect_lang') || 'en';
+    const currentLang = getSavedLanguage();
     let thankMsg = `✓ Thank you, ${quoteData.name}! Your quote request has been sent to starelectrical801@gmail.com. We will contact you at ${quoteData.phone} shortly.`;
     if (currentLang === 'ta') {
       thankMsg = `✓ நன்றி, ${quoteData.name}! உங்கள் மேற்கோள் கோரிக்கை starelectrical801@gmail.com முகவரிக்கு வெற்றிகரமாக அனுப்பப்பட்டது. விரைவில் ${quoteData.phone} எண்ணில் தொடர்புகொள்வோம்.`;
@@ -726,6 +742,9 @@ async function sendQuoteEmail(quoteData, submitBtn, formElement) {
  * Send Quote details directly via WhatsApp (+91 73975 25538)
  */
 function sendQuoteViaWhatsApp(formId) {
+  const form = document.getElementById(formId);
+  if (form && !form.reportValidity()) return;
+
   let name, phone, email, service, message;
   if (formId === 'modalQuoteForm') {
     name = document.getElementById('modalName')?.value?.trim();
@@ -770,6 +789,7 @@ function sendQuoteViaWhatsApp(formId) {
 async function handleQuoteSubmit(event) {
   event.preventDefault();
   const form = document.getElementById('quoteForm');
+  if (form && !form.reportValidity()) return;
   const submitBtn = document.getElementById('btnSubmitQuote') || form.querySelector('button[type="submit"]');
   const name = document.getElementById('formName').value.trim();
   const phone = document.getElementById('formPhone').value.trim();
@@ -786,6 +806,7 @@ async function handleQuoteSubmit(event) {
 async function handleModalQuoteSubmit(event) {
   event.preventDefault();
   const form = document.getElementById('modalQuoteForm');
+  if (form && !form.reportValidity()) return;
   const submitBtn = document.getElementById('btnSubmitModalQuote') || form.querySelector('button[type="submit"]');
   const name = document.getElementById('modalName').value.trim();
   const phone = document.getElementById('modalPhone').value.trim();
